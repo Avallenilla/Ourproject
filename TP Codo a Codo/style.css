@@ -1,0 +1,398 @@
+/**Header**/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+/* https://colorhunt.co/palette/352f445c5470b9b4c7faf0e6 colores
+Se podria meter "productos en un div y que pertenezca al contenedor productos 
+prodtos item grid-colums-start grid-column-end 1linea combinada por 4 productos*/
+/*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{scroll-timeline: --page-scroll block;}
+@keyframes grow-progress { 
+	from {transform: scaleX(0);}
+	to {transform: scale(1);}
+}
+#progress{ transform-origin: 0 50%;
+	animation: grow-progress auto linear;
+	animation-timeline: --page-scroll;
+}*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+body{
+	font-family:'Open Sans';
+	background-color: rgb(255, 255, 255);
+	color: #595C5F;
+}
+header{
+	background-color: #f2f2f2;
+	text-align: center;
+	padding: 25px 0px;
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	grid-area: menu;
+}
+.logo{
+	float: left;
+	position: relative;
+	padding: 0%;
+	max-width: 20%;
+}
+.menu-main > li{
+	display: inline-block;
+	position: relative;
+}
+.menu-main > li > a{
+	text-decoration: none;
+	color: #0A2F6B;
+	margin: 15px 15px;
+	padding: 5PX 15PX;
+	border-radius: 30px;
+	list-style: none;
+	display: inline-block;
+}
+nav a:hover{
+	background-color: #B9B4C7;
+	transition: all .3s;
+}
+.submenu {
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+	transition: 1.5s;
+	width: 150%;
+	list-style: none;
+}
+.submenu li{
+	text-decoration: none;
+	color: #0A2F6B;
+}
+.submenu > li > a{
+	display: block;
+	background-color: #f2f2f2;
+	text-align: left;
+	color: #0A2F6B;
+	text-decoration: none;
+	padding: 10px;
+}
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
+}
+.encabezado-img{
+	background-image: url(./Imagenes/Encabezado2.jpg);
+	height: 300px;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color:white;
+	width: 100%;
+	grid-area: "encabezado";
+}
+.encabezado-img h1{
+	font-size: 40px;
+	align-items: center;
+	justify-content: center;
+}
+.box{
+	border-color: #0A2F6B;
+	display:flex;
+	gap: 30px;
+	justify-content: center;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+/*----------------------------------------------DEFINIENDO 450px pantallas xs---------------------*/
+@media (max-width: 450px){
+	
+	.box{
+		flex-direction: column;
+		align-items: center;
+	}
+	.one, .two, .three{
+		width: 70% !important;
+	}
+	.container-2{
+		flex-direction: column;
+		align-items: center;
+	}
+}
+	
+	.one{
+		grid-column: 1;
+		grid-row: 1/2;
+		background-color: rgb(180, 193, 214, .4);
+		border: 2px solid;
+		border-radius: 20px;
+		padding: 10px;
+		padding-bottom: 50px;
+		text-align: center;
+		box-shadow: 2px 2px #0A2F6B;
+		max-width: 300px;
+		width: 33.3%;
+		
+	}
+	.one img{
+		margin-top: 20px;
+	}
+	.one{animation-duration: 1s;
+		animation-name: slidein;
+	}
+	@keyframes slidein{ from {margin-left: 100%;
+		width: 300%; }
+		to {margin-left: 0%; width: 100%;}
+	}
+	.two{
+		grid-column: 2;
+		grid-row: 1/2;
+		background-color: rgb(180, 193, 214, .4);
+		border: 2px solid;
+		border-radius: 20px;
+		padding: 10px;
+		padding-bottom: 50px;
+		text-align: center;
+		box-shadow: 2px 2px #0A2F6B;
+		max-width: 300px;
+		width: 33.3%;
+	}
+	.two{ 
+		animation-duration: 1s;
+		animation-name: slidein;
+	}
+	@keyframes slidein{ from {margin-left: 100%;
+		width: 300%; }
+		to {margin-left: 0%; width: 100%;}
+	}
+	.two img{
+		margin-top: 20px;
+	}
+	.three{
+		grid-column: 3;
+		grid-row: 1/2;
+		background-color: rgb(180, 193, 214, .4);
+		border: 2px solid;
+		border-radius: 20px;
+		padding: 10px;
+		padding-bottom: 50px;
+		padding-left: 40px;
+		text-align: center;
+		box-shadow: 2px 2px #0A2F6B;
+		max-width: 300px;
+		width: 33.3%;
+	}
+	.three img{
+		margin-top: 20px;
+	}
+	.three {animation-duration: 1s;
+		animation-name: slidein;
+	}
+	@keyframes slidein{ from {margin-left: 100%;
+		width: 300%; }
+		to {margin-left: 0%; width: 100%;}
+	}
+	/*---------------------------DEFINIENDO 750px pantallas xs---------------------*/
+/*@media (max-width: 750px){
+	
+	.box{
+		flex-direction: row;
+		align-items:first center;
+		}
+		.one, .two, .three{
+			width: 30%;
+		}
+
+	}
+		/*----------------------------------------------DEFINIENDO 950px pantallas pequeñas---------------------*/
+/*@media (max-width: 950px){
+	.box{
+		flex-direction: row;
+		align-items: row;
+		}
+		.one, .two, .three{
+			width: 100%;
+		}
+		.container-2{
+		flex-direction: row;
+		align-items: row;
+		height: min-content;
+		}
+	}/*/
+
+	.lista{
+		text-align: left;
+	}
+	.titulo{
+		color: #0A2F6B;
+		text-align: center;
+	}
+	.separador{
+		width: 200px;
+		position: fixed;
+	}
+	
+	.productos{
+		flex-direction: row;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: 30px;
+		padding-bottom: 20px;
+	}
+	.productos img{
+		width: 100%;
+		object-fit: cover;
+		
+	}
+	.productos > div{
+		max-width: 300px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	.valvulas {
+		grid-column: 1;
+		grid-row: 1/2;
+	}
+	
+	.canos-tubos{
+		grid-column: 2;
+		grid-row: 1/2;
+	}
+	.bridas{
+		grid-column: 3;
+		grid-row: 1/2;
+	}
+	.accesorios{
+		grid-column: 4;
+		grid-row: 1/2;
+	}
+	.titulo2{
+		color: #0A2F6B;
+		font-size: 35px;
+		text-align: center;
+
+	}
+	.titulo3{
+		color: #0A2F6B;
+		font-size: 20px;
+		text-align: center;
+	}
+	.titulo4{
+		color: #0A2F6B;
+		font-size: 20px;
+		text-align: center;
+	}
+	/* .imagen:hover{
+		filter:-webkit-transform:scale(1.1);transform:scale(1.1);
+	} */
+	.footer{
+		background-color: rgb(39, 59, 132);
+		padding-bottom: 50px;
+		padding-left: 30px;
+		grid-area: "pie";
+	}
+	.section-footer{
+		width: 80%;
+		height: 100px;
+		padding: 10px 10px 10px 10px;
+		margin-bottom: 20px;
+	}
+	
+	.footer-info{
+		color: white;
+		font-size: 12px;
+		line-height: 2.5;
+	}
+	.footer-info a{
+		color: white;
+		padding-left: 10px;
+	}
+	.fa-whatsapp{
+		width: 100%;
+	}
+	.position-fixed {
+		position: fixed;
+	}
+	.contact{
+		display: inline-grid;
+		padding-bottom: 1.5rem;
+		width: 400px;
+	}
+	.contact-input{
+		padding: 10px;
+		box-sizing: border-box;
+		width: 100%;
+		margin: 0 0 10px;
+		border: 1px solid;
+		font-size: 10pt;
+		line-height: 10pt;
+	}
+	.titulo-producto{
+		font-size: 36px;
+		color:#0A2F6B;
+		padding-right: 20px;
+		font-family: "Open Sans regular";
+	}
+	.desc-producto{
+		line-height: 20pt;
+		font-size: 14pt;
+		font-family: "Open Sans regular";
+		text-align: left;
+	}
+	.division{
+		width: 100%;
+		height: 160px;
+	}
+	.slide{
+		margin-top: 10px;
+	}
+	.imagen-tubos{
+		width: 400px;
+		height: 400px;
+		padding-top: 25px;
+	}
+	
+	.container-2{
+		grid-area: "productos";
+	}
+	.carousel-item{
+		padding: 100px;
+		height: 80%;
+	}
+	.valvula-descripcion{
+		padding: 0 20px;
+	}
+	.accesorio-descripcion{
+		padding-top: 50px;
+	}
+	
+	.encabezado-img{
+		margin-bottom: 30px;
+	}
+	
+	/*----------------------------------------------DEFINIENDO CONTENEDOR---------------------*/
+	/* .container{
+		padding-left: 50px;
+		padding-right: 50px;
+		display: grid;
+		grid-template: repeat(5, auto) /auto 100%;
+		grid-template-areas: "encabezado" 
+		"menu" 
+		"cajitas" 
+		"productos" 
+		"pie";
+	} */
+	
+	
+	
