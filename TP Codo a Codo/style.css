@@ -32,30 +32,41 @@ body{
 header{
 	background-color: #f2f2f2;
 	text-align: center;
-	padding: 25px 0px;
+	padding: 20px;
 	width: 100%;
-	height: 100px;
-	position: absolute;
-	grid-area: menu;
+	/* height: 100px; */
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+.menu {
+	flex-grow: 1;
 }
 .logo{
 	float: left;
 	position: relative;
 	padding: 0%;
-	max-width: 20%;
+	width: 100px;
+	/* max-width: 20%; */
+}
+.menu-main{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 20px;
+	width: 100%;
 }
 .menu-main > li{
-	display: inline-block;
-	position: relative;
+	list-style: none;
 }
 .menu-main > li > a{
 	text-decoration: none;
 	color: #0A2F6B;
-	margin: 15px 15px;
-	padding: 5PX 15PX;
+	/* margin: 15px 15px;
+	padding: 5PX 15PX; */
 	border-radius: 30px;
-	list-style: none;
-	display: inline-block;
+	
+	/* display: inline-block; */
 }
 nav a:hover{
 	background-color: #B9B4C7;
@@ -118,7 +129,7 @@ nav a:hover{
 		align-items: center;
 	}
 	.one, .two, .three{
-		width: 70% !important;
+		width: 80% !important;
 	}
 	.container-2{
 		flex-direction: column;
@@ -307,6 +318,8 @@ nav a:hover{
 		height: 100px;
 		padding: 10px 10px 10px 10px;
 		margin-bottom: 20px;
+		display: flex;
+		flex-direction: row;
 	}
 	
 	.footer-info{
@@ -316,8 +329,27 @@ nav a:hover{
 	}
 	.footer-info a{
 		color: white;
-		padding-left: 10px;
+		/* padding-left: 10px; */
 	}
+	
+	@media screen and (max-width: 750px) {
+		.footer-info .content-footer-info { 
+			flex-direction: column;
+			gap: 5px !important;
+
+		}
+	}
+	.footer-info .content-footer-info {
+		display: flex;
+		gap: 30px;
+	}
+	.footer-info div p { 
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 10px;
+	}
+
 	.fa-whatsapp{
 		width: 100%;
 	}
@@ -381,6 +413,54 @@ nav a:hover{
 		margin-bottom: 30px;
 	}
 	
+.footer-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	color: #FFFFFF;
+	font-size: 18px;
+	background-color: rgb(39, 59, 132);
+	line-height: 25px;
+}
+
+.footer-form p{ 
+	font-size: 16px;
+ 	padding-top: 20px;
+	text-align: center;
+}
+
+.footer-form input{
+	border-radius: 5px;
+	border: #f2f2f2 solid;
+	width: 100%;
+	
+}
+.footer-form label{
+	color: #FFFFFF;
+	font-size: 14px;
+	text-align: center;
+}
+.footer-form .control{
+	border-radius: 5px;
+	font-size: 14px;
+	resize: none;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	width: 100%;
+}
+.footer-form .boton{
+	border-radius: 5px;
+	border-color: #FFFFFF, solid, 1px;
+	background-color: #0A2F6B;
+	color: #FFFFFF;
+	font-size: 15px;
+	line-height: 30px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.footer-form div{
+	text-align: center;
+	padding-bottom: 2px;
+}
+
 	/*----------------------------------------------DEFINIENDO CONTENEDOR---------------------*/
 	/* .container{
 		padding-left: 50px;
